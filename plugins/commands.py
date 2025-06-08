@@ -89,16 +89,17 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-                    InlineKeyboardButton('+ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ +', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton('• ᴛᴏᴘ •', callback_data="topsearch"),
-                    InlineKeyboardButton('• ᴜᴘɢʀᴀᴅᴇ •', callback_data="premium"),
-                ],[
-                    InlineKeyboardButton('• ʜᴇʟᴘ •', callback_data='features'),
-                    InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='bot')
-                ],[
-                    InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ •', callback_data="earn")
-                ]]
+            InlineKeyboardButton('❗ 𝚂𝙴𝙰𝚁𝙲𝙷 𝙵𝙾𝚁𝙼𝙰𝚃 & طريقـة البحـث ❗', callback_data='ezay')
+        ], [
+            InlineKeyboardButton('🔊 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TorrentSeriess'),
+            InlineKeyboardButton('🔍 𝚂𝙴𝙰𝚁𝙲𝙷', url='https://t.me/ArrowFlix2')
+        ], [
+            InlineKeyboardButton('اضـافـة الترجمـة 🪄', callback_data='howadd'),
+            InlineKeyboardButton('ليـه التورنت..؟ 🧲', callback_data='nhow')
+        ], [                
+            InlineKeyboardButton('💠 𝙷𝙴𝙻𝙿', callback_data='help'),
+            InlineKeyboardButton('🌐 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
+        ]]      
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
