@@ -1,7 +1,7 @@
 class script(object):
-    START_TXT = """<b>​​​ʜɪɪ 👋, 
-ɪ ᴀᴍ ᴛʜᴇ ᴍᴏꜱᴛ ᴘᴏᴡᴇʀꜰᴜʟʟ ᴍᴇᴅɪᴀ ᴘʀᴏᴠɪᴅᴇʀ ʙᴏᴛ. ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇᴅ ᴀʟʟ ʟᴀᴛᴇꜱᴛ ᴍᴏᴠɪᴇꜱ ᴏʀ ꜱᴇʀɪᴇꜱ. ᴊᴜꜱᴛ ꜱᴇɴᴅ ᴍᴇ ᴛʜᴇ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ .</b>"""
-
+    START_TXT = """<b><blockquote>𝙷𝙴𝙻𝙾 {}, ᴍʏ ɴᴀᴍᴇ <a href=https://t.me/{}>{}</a></blockquote>
+𝙸 𝙲𝙰𝙽 𝙷𝙴𝙻𝙿 𝚈𝙾𝚄 𝚃𝙾 𝙵𝚒𝚗𝚍 𝙰𝙽𝚈 𝚂𝙴𝚁𝙸𝙴𝚂 𝙰𝙽𝙳 𝙼𝙾𝚅𝙸𝙴𝚂 𝙹𝚄𝚂𝚃 𝚂𝙴𝙽𝙳 𝙽𝙰𝙼𝙴</b>\n\nꜰᴏʀ ᴍᴏʀᴇ ʜᴇʟᴘ ʀᴇᴀᴅ ꜰʀᴏᴍ ᴛʜᴇ ᴍᴇɴᴜ ʙᴇʟᴏᴡ"""
+    
     FEATURES_TXT = """<b>ʜᴇʀᴇ ɪꜱ ᴀʟʟ ᴍʏ ꜰᴜɴᴛɪᴏɴꜱ.</b>"""
 
     ABOUT_TXT = """<b>╭────[ ᴍʏ ᴅᴇᴛᴀɪʟs ]────⍟
@@ -11,8 +11,17 @@ class script(object):
 ├⍟ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 𝟹</a> 
 ├⍟ ᴅᴀᴛᴀʙᴀꜱᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a> 
 ├⍟ ꜱᴇʀᴠᴇʀ : <a href='https://heroku.com/'>ʜᴇʀᴏᴋᴜ</a> 
-├⍟ ꜱᴛᴀᴛᴜꜱ : ᴠ4.8 [ ꜱᴛᴀʙʟᴇ ]
+├⍟ ꜱᴛᴀᴛᴜꜱ : ᴠ7.8 [ ꜱᴛᴀʙʟᴇ ]
 ╰───────────────⍟</b>"""
+    HOW_TXT = """<b><i>𝟷‌◖ ارسل اسم المسلسل او الفيلم في <a href=https://t.me/ArrowFlix2/><b>الجروب هنا</b></a>\nSend Series or Movies Name in <a href=https://t.me/ArrowFlix2/><b>Group</b></a>\n\n𝟸‌◖ يقوم البوت بارساله لك بعد ثواني\nThe bot will send it to you.</b><i>"""
+
+    NHOW_TXT = """<b><i>𝟷◖ فيديو خام بدون لوجو\n𝟸◖ جودة اصلية و حجم قليل مقارنة بالمواقع\n𝟹◖ جودة صوت افضل\n𝟺◖ اختيار الترجمة المناسبة (المترجم المفضل)\n𝟻◖ عرض اكثر من ترجمة في نفس الوقت\n𝟼◖ المساعدة علي تعلم الإنجليزية عن طريق عرض <u>الترجمة العربية و الإنجليزية معاً</u>، <u>الترجمة الإنجليزية فقط</u> ، <u>بدون اي ترجمة</u>\n𝟽◖ مسلسلات Netflix , AppleTV , Prime تكون بأكثر من 30 ترجمة <a https://telegra.ph/تحميل-المسلسل-و-اضافة-الترجمة-03-19><b>شرح اختيار الترجمة</b></a>\n𝟾◖ آخيرا والأهم هي المشاهدة علي تليجرام بدون اعلانات</b>"""
+
+    HOWADD_TXT = """<b>هنا شرح لاضافة الترجمة والبرامج اختر من الازرار الآتية..</b></a>"""
+
+    EZAY_TXT = """<b>📌 𝗔𝗿𝗮𝗯𝗶𝗰\n• اضغط /Series لطريقة البحث عن <u>مسلسل</u> 📃\n• اضغط /Movie لطريقة البحث عن <u>فيلم</u> 📃\n📌 𝗘𝗻𝗴𝗹𝗶𝘀𝗵\n• 𝖧𝗂𝗍 /eSeries 𝖥𝗈𝗋 𝖲𝖾𝗋𝗂𝖾𝗌 𝖲𝖾𝖺𝗋𝖼𝗁 𝖱𝗎𝗅𝖾𝗌 📃\n• 𝖧𝗂𝗍 /eMovie 𝖥𝗈𝗋 𝖬𝗈𝗏𝗂𝖾 𝖲𝖾𝖺𝗋𝖼𝗁 𝖱𝗎𝗅𝖾𝗌 📃</b>""" 
+
+    IMP_TXT = """<b><u>اولا: الصوت 🎤</u></b>\n• <b>Dubbed مدبلج</b>\nفي المسلسلات غير الإنجليزية [اسباني كوري..] ويكون الصوت هنا مدبلج انجليزي فقط\n• <b>Dual Audio صوت مزدوج</b>\nيعني يوجد مثلا صوت انجليزي وصوت ياباني (ENG-JPN)\n⚠️ عند التحميل من الافضل اذا كان في الوصف اسم لغة غير لغة العمل الاصلي لا تقم بتحميله ⚠️\n\n<b><u>ثانياً: الفيديو 📺</u></b>\n<b>ʜᴅᴛᴠ</b> نسخة تم تسجيلها من التلفاز(مسلسل)\n<b>ᴡᴇʙ-ᴅʟ | ᴡᴇʙʀɪᴘ</b> نسخه مسحوبة من المنصات\n<b>ʙʟᴜʀᴀʏ</b> نسخه مسحوبة من اقراص DVD وهي الافضل\n<b>ʜᴅʀɪᴘ</b> نسخه مسربة وتكون بدقة ضعيفة\n<b>ʜᴅᴄᴀᴍ</b> نسخه تم تصويرها في السينما (فيلم)"""
 
     FORCESUB_TEXT="""<b>
 ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ʀᴇᴏ̨ᴜᴇsᴛᴇᴅ ʙʏ ʏᴏᴜ.
@@ -28,7 +37,6 @@ class script(object):
 │
 ├⋟ ᴀʟʟ ᴜsᴇʀs ⋟ <code>{}</code>
 ├⋟ ᴀʟʟ ɢʀᴏᴜᴘs ⋟ <code>{}</code>
-├⋟ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀꜱ ⋟ <code>{}</code>
 ├⋟ ᴀʟʟ ꜰɪʟᴇs ⋟ <code>{}</code>
 ├⋟ ᴜsᴇᴅ sᴛᴏʀᴀɢᴇ ⋟ <code>{}</code>
 ├⋟ ꜰʀᴇᴇ sᴛᴏʀᴀɢᴇ ⋟ <code>{}</code>
@@ -53,7 +61,6 @@ class script(object):
 │
 ├⋟ ᴀʟʟ ᴜsᴇʀs ⋟ <code>{}</code>
 ├⋟ ᴀʟʟ ɢʀᴏᴜᴘs ⋟ <code>{}</code>
-├⋟ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀꜱ ⋟ <code>{}</code>
 ├⋟ ᴀʟʟ ꜰɪʟᴇs ⋟ <code>{}</code>
 ├⋟ ᴜsᴇᴅ sᴛᴏʀᴀɢᴇ ⋟ <code>{}</code>
 ├⋟ ꜰʀᴇᴇ sᴛᴏʀᴀɢᴇ ⋟ <code>{}</code>
@@ -64,42 +71,7 @@ class script(object):
 ├⋟ ʀᴀᴍ ⋟ <code>{}%</code>
 ├⋟ ᴄᴘᴜ ⋟ <code>{}%</code>   
 │
-<b>╰─────────────────────⍟</b>"""
-
-    EARN_INFO = """<b><i><blockquote>💸 ʜᴏᴡ ᴛᴏ ᴇᴀʀɴ ᴍᴏɴᴇʏ ʙʏ ᴛʜɪs ʙᴏᴛ - </blockquote>
-
-1:- ʏᴏᴜ ᴍᴜꜱᴛ ʜᴀᴠᴇ ᴀᴛʟᴇᴀꜱᴛ ᴏɴᴇ ɢʀᴏᴜᴘ ᴡɪᴛʜ ᴍɪɴɪᴍᴜᴍ 100 ᴍᴇᴍʙᴇʀꜱ.
-
-2:- ᴍᴀᴋᴇ <a href=https://t.me/{}</a> ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
-
-3:- ᴄʀᴇᴀᴛᴇ ᴀᴄᴄᴏᴜɴᴛ ᴏɴ ᴀɴʏ sʜᴏʀᴛɴᴇʀ ʟɪᴋᴇ ʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴜsᴇ ᴛʜɪs ʙᴇsᴛ sʜᴏʀᴛɴᴇʀ <a href=https://zipshort.net/ref/noyanbanerjee>ᴢɪᴘꜱʜᴏʀᴛ</a>.
-
-4:- ᴛʜᴇɴ sᴇᴛ ʏᴏᴜʀ sʜᴏʀᴛɴᴇʀ ᴅᴇᴛᴀɪʟs ʙʏ ᴛʜɪs ꜰᴏʀᴍᴀᴛ 👇
-
-<code>/set_shortner omegalinks.in a7ac9b3012c67d7491414cf272d82593c75f6cbb</code>
-
-<code>/set_shortner_2 mdiskshortner.link e7beb3c8f756dfa15d0bec495abc65f58c0dfa95</code>
-
-<code>/set_shortner_3 mdiskshortner.link e7beb3c8f756dfa15d0bec495abc65f58c0dfa95</code>
-
-<code>/set_tutorial https://t.me/DwldMS/19</code>
-
-<code>/set_tutorial_2 https://t.me/DwldMS/20</code>
-
-<code>/set_tutorial_3 https://t.me/DwldMS/20</code>
-
-<code>/set_time 300</code>
-
-<code>/set_time_2 300</code>
-
-<code>/set_log_channel -100*******</code>
-
-<code>/set_fsub -100*******</code>
-
-ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀʟʟ ᴅᴇᴛᴀɪʟs ʙʏ /details ᴄᴏᴍᴍᴀɴᴅ
-
-💯 ɴᴏᴛᴇ - ᴛʜɪs ʙᴏᴛ ɪs ꜰʀᴇᴇ ᴛᴏ ᴀʟʟ, ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ʙᴏᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘs ᴀɴᴅ ᴇᴀʀɴ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏɴᴇʏ.</i></b>"""    
-    
+<b>╰─────────────────────⍟</b>"""    
 
     SETTING_TXT = """    
 <u>ꜱᴇᴛᴛɪɴɢꜱ</u> :
@@ -233,24 +205,18 @@ Iᴅ - <code>{}</code>
 Nᴀᴍᴇ - {}
 """
 
-    ALRT_TXT = """ʜᴇʟʟᴏ {},
-ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ,
-ʀᴇǫᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ..."""
+    ALRT_TXT = """ʜᴇʟʟᴏ {}, ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ
+هذا ليس طلبك.. للتحكم في الأزرار ارسل اسم الفيلم"""
 
     OLD_ALRT_TXT = """ʜᴇʏ {},
-ʏᴏᴜ ᴀʀᴇ ᴜꜱɪɴɢ ᴏɴᴇ ᴏꜰ ᴍʏ ᴏʟᴅ ᴍᴇꜱꜱᴀɢᴇꜱ, 
-ᴘʟᴇᴀꜱᴇ ꜱᴇɴᴅ ᴛʜᴇ ʀᴇǫᴜᴇꜱᴛ ᴀɢᴀɪɴ."""
+ʏᴏᴜ ᴀʀᴇ ᴜꜱɪɴɢ ᴏɴᴇ ᴏꜰ ᴍʏ ᴏʟᴅ ᴍᴇꜱꜱᴀɢᴇꜱ, ᴘʟᴇᴀꜱᴇ ꜱᴇɴᴅ ᴛʜᴇ ʀᴇQᴜᴇꜱᴛ ᴀɢᴀɪɴ.
+انت تستخدم رسالة قديمة"""
 
-    CUDNT_FND = """ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ {}
-ᴅɪᴅ ʏᴏᴜ ᴍᴇᴀɴ ᴀɴʏ ᴏɴᴇ ᴏꜰ ᴛʜᴇꜱᴇ ?"""
+    CUDNT_FND = """🔎"""
 
-    I_CUDNT = """<b><i>ᴛʜɪꜱ ᴍᴏᴠɪᴇ ɪꜱ ɴᴏᴛ ᴄᴜʀʀᴇɴᴛʟʏ ᴀᴠᴀɪʟᴀʙʟᴇ.
-
-ɪᴛ ʜᴀꜱ ᴇɪᴛʜᴇʀ ɴᴏᴛ ʙᴇᴇɴ ʀᴇʟᴇᴀꜱᴇᴅ ᴏʀ ʜᴀꜱ ɴᴏᴛ ʏᴇᴛ ʙᴇᴇɴ ᴀᴅᴅᴇᴅ ᴛᴏ ᴛʜᴇ ᴅᴀᴛᴀʙᴀꜱᴇ.</i></b>"""
+    I_CUDNT = """🔎"""
     
-    I_CUD_NT = """<b><i>ᴛʜɪꜱ ᴍᴏᴠɪᴇ ɪꜱ ɴᴏᴛ ᴄᴜʀʀᴇɴᴛʟʏ ᴀᴠᴀɪʟᴀʙʟᴇ.
-
-ɪᴛ ʜᴀꜱ ᴇɪᴛʜᴇʀ ɴᴏᴛ ʙᴇᴇɴ ʀᴇʟᴇᴀꜱᴇᴅ ᴏʀ ʜᴀꜱ ɴᴏᴛ ʏᴇᴛ ʙᴇᴇɴ ᴀᴅᴅᴇᴅ ᴛᴏ ᴛʜᴇ ᴅᴀᴛᴀʙᴀꜱᴇ.</i></b>"""
+    I_CUD_NT = """🔎"""
     
     MVE_NT_FND = """<b><i>ᴛʜɪꜱ ᴍᴏᴠɪᴇ ɪꜱ ɴᴏᴛ ᴄᴜʀʀᴇɴᴛʟʏ ᴀᴠᴀɪʟᴀʙʟᴇ.
 
@@ -311,18 +277,20 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b><a href="https://t.me/SilentXBotz">{file_name}</a></b>\n<b>Uploaded By: <a herf=`https://t.me/SilentXBotz`>[SilentXBotz]</a></b>"""
+    CAPTION = """<code>{file_name}</code><b>   
+➲ [ᴀʀʀᴏᴡғʟɪx](https://t.me/ArrowFlix2)
+➲ [ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ](https://t.me/TorrentSeriess)
+</b>"""
 
     IMDB_TEMPLATE_TXT = """
-<b>🏷 Title</b>: <a href={url}>{title}</a>
-🎭 Genres: {genres}
-� Year: <a href={url}/releaseinfo>{year}</a>
-🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 (based on {votes} user ratings.)
-📀 RunTime: {runtime} Minutes
-
-⏰Result Shown in: {remaining_seconds} <i>seconds</i> 🔥
-Requested by : {message.from_user.mention}</b>"""    
-
+<b>🎬 ᴛɪᴛᴛʟᴇ : <a href={url}>{title}</a>
+📆 ʏᴇᴀʀ : {year}\n🎭 ɢᴇɴʀᴇ : {genres}
+⭐ ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating} IMDB</a>
+⏰ ʀᴜɴᴛɪᴍᴇ : {runtime} ᴍɪɴᴜᴛᴇs
+🎙️ ʟᴀɴɢᴜᴀɢᴇ : {languages}
+🌍 ᴄᴏᴜɴᴛʀɪᴇs : {countries}
+📝 sᴛᴏʀʏ : {plot}\n\n   ®Pᴏᴡᴇʀᴇᴅ Bʏ : <a href=https://t.me/TorrentSeriess><b>AʀʀᴏᴡFʟɪx</b></a></b>
+""" 
     RESTART_TXT = """
 <b>{} ʙᴏᴛ ʀᴇꜱᴛᴀʀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ !
 
