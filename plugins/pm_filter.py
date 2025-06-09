@@ -1380,6 +1380,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+        except Exception as e:
+            print(e)
 
     elif query.data == "nhow":
         buttons = [[
@@ -1407,7 +1409,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.HOWADD_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )       
+        )  
+        except Exception as e:
+            print(e)
 
     elif query.data == "fnt":
         buttons = [[
@@ -1426,7 +1430,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.FNT_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )        
+        )     
+        except Exception as e:
+            print(e)
 
     elif query.data == "imp":
         buttons = [[
@@ -1445,7 +1451,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.IMP_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )        
+        )   
+        except Exception as e:
+            print(e)
+        
     elif query.data == "filters":
         try:
             buttons = [[
