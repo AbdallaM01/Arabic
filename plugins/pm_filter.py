@@ -1254,8 +1254,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('اضـافـة الترجمـة 🪄', callback_data='howadd'),
             InlineKeyboardButton('ليـه التورنت..؟ 🧲', callback_data='nhow')
         ], [                
-            InlineKeyboardButton('💠 𝙷𝙴𝙻𝙿', callback_data='help'),
-            InlineKeyboardButton('🌐 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
+            InlineKeyboardButton('💠 𝙷𝙴𝙻𝙿', callback_data='features'),
+            InlineKeyboardButton('🌐 𝙰𝙱𝙾𝚄𝚃', callback_data='bot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -1367,7 +1367,117 @@ async def cb_handler(client: Client, query: CallbackQuery):
 	    )
         except Exception as e:
             print(e)
+		
+    elif query.data == "ezay":
+        try:
+            btn = [[
+            InlineKeyboardButton('مصطلحات تورنت 🔑', callback_data='imp'),
+            InlineKeyboardButton('للمزيد...', url='https://t.me/TorrentSeriess/2735')
+        ], [
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='start')            
+        ]]
+            reply_markup = InlineKeyboardMarkup(btn)                        
+            await client.edit_message_media(                
+                query.message.chat.id, 
+                query.message.id, 
+                InputMediaPhoto(random.choice(PICS))                       
+            )
+            await query.message.edit_text(
+                text=script.EZAY_TXT,
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+            )
+        except Exception as e:
+            print(e)
+		
+    elif query.data == "nhow":
+        try:
+            btn = [[            
+                InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
+            ]]
+            reply_markup = InlineKeyboardMarkup(btn)                        
+            await client.edit_message_media(                
+                query.message.chat.id, 
+                query.message.id, 
+                InputMediaPhoto(random.choice(PICS))                       
+            )
+            await query.message.edit_text(
+                text=script.NHOW_TXT,
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+            )
+        except Exception as e:
+            print(e)
 
+    elif query.data == "howadd":
+        try:
+            btn = [[
+            InlineKeyboardButton('🕸️ موقع الترجمة', url='https://subdl.com'),
+            InlineKeyboardButton('📺 برامج المشاهدة', url='https://telegra.ph/برامج-عرض-الترجمة-04-24')
+        ], [            
+            InlineKeyboardButton('➕ اضافة الترجمة', url='https://adjacent-sheila-kathryn-abdallam01-bd7953ed.koyeb.app/watch/109070/subdl.mp4?hash=AgADzB'),
+            InlineKeyboardButton('💬 خط الترجمة', callback_data='fnt')
+        ], [
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='start')
+        ]]
+            reply_markup = InlineKeyboardMarkup(btn)                        
+            await client.edit_message_media(                
+                query.message.chat.id, 
+                query.message.id, 
+                InputMediaPhoto(random.choice(PICS))                       
+            )
+            await query.message.edit_text(
+                text=script.HOWADD_TXT,
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+            )
+        except Exception as e:
+            print(e)
+
+    elif query.data == "fnt":
+        try:
+            btn = [[
+            InlineKeyboardButton('خط ايجي بست', url='https://t.me/ARROWFLIXBOT?start=ZmlsZV9CUUFEQkFBRDBRY0FBdmdJdUZLbFU4SktVWmZuZnhZRQ'),
+            InlineKeyboardButton('خط نتفليكس', url='https://t.me/ARROWFLIXBOT?start=ZmlsZV9CUUFEQkFBREx3a0FBbWtGS1ZPLTJOeXlsM09wWHhZRQ')
+        ], [
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='howadd')
+        ]]
+            reply_markup = InlineKeyboardMarkup(btn)                        
+            await client.edit_message_media(                
+                query.message.chat.id, 
+                query.message.id, 
+                InputMediaPhoto(random.choice(PICS))                       
+            )
+            await query.message.edit_text(
+                text=script.FNT_TXT,
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+            )
+        except Exception as e:
+            print(e)
+
+    elif query.data == "imp":
+        try:
+            btn = [[
+            InlineKeyboardButton('🎤 اختيار الصوت', url='https://telegra.ph/اختيار-الصوت-04-25'),
+            InlineKeyboardButton('📺 الفرق بين x265 x264', url='https://telegra.ph/معدل-الترميز-04-23')
+        ], [
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='start')
+        ]]
+            reply_markup = InlineKeyboardMarkup(btn)                        
+            await client.edit_message_media(                
+                query.message.chat.id, 
+                query.message.id, 
+                InputMediaPhoto(random.choice(PICS))                       
+            )
+            await query.message.edit_text(
+                text=script.IMP_TXT,
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+            )
+        except Exception as e:
+            print(e)
+		
     elif query.data == "features":
         try:
             buttons = [[
@@ -1763,7 +1873,7 @@ async def auto_filter(client, msg, spoll=False):
                 cap += f"<b>{file_num}. <a href='https://telegram.me/{temp.U_NAME}?start=file_{message.chat.id}_{file.file_id}'>{get_size(file.file_size)} | {clean_filename(file.file_name)}\n\n</a></b>"                
     if imdb and imdb.get('poster'):
         try:
-            hehe = await m.edit_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn), parse_mode=enums.ParseMode.HTML)
+            hehe = await m.edit_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             try:
                 if settings['auto_delete']:
                     await asyncio.sleep(DELETE_TIME)
