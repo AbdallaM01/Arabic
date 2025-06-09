@@ -11,7 +11,7 @@ class script(object):
 ├⍟ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 𝟹</a> 
 ├⍟ ᴅᴀᴛᴀʙᴀꜱᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a> 
 ├⍟ ꜱᴇʀᴠᴇʀ : <a href='https://heroku.com/'>ʜᴇʀᴏᴋᴜ</a> 
-├⍟ ꜱᴛᴀᴛᴜꜱ : ᴠ7.8 [ ꜱᴛᴀʙʟᴇ ]
+├⍟ ꜱᴛᴀᴛᴜꜱ : 𝚟𝟽.𝟸𝟹 [ ꜱᴛᴀʙʟᴇ ]
 ╰───────────────⍟</b>"""
     HOW_TXT = """<b><i>𝟷‌◖ ارسل اسم المسلسل او الفيلم في <a href=https://t.me/ArrowFlix2/><b>الجروب هنا</b></a>\nSend Series or Movies Name in <a href=https://t.me/ArrowFlix2/><b>Group</b></a>\n\n𝟸‌◖ يقوم البوت بارساله لك بعد ثواني\nThe bot will send it to you.</b><i>"""
 
