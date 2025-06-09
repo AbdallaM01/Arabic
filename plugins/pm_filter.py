@@ -1209,13 +1209,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             fileName = {quote_plus(get_name(silent_msg))}
             silent_stream = f"{URL}watch/{str(silent_msg.id)}/{quote_plus(get_name(silent_msg))}?hash={get_hash(silent_msg)}"
             silent_download = f"{URL}{str(silent_msg.id)}/{quote_plus(get_name(silent_msg))}?hash={get_hash(silent_msg)}"
-	    button = [[
+	    btn = [[
                 InlineKeyboardButton("• ᴅᴏᴡɴʟᴏᴀᴅ •", url=download),
                 InlineKeyboardButton('• ᴡᴀᴛᴄʜ •', url=stream)
             ],[
                 InlineKeyboardButton("• ᴡᴀᴛᴄʜ ɪɴ ᴡᴇʙ ᴀᴘᴘ •", web_app=WebAppInfo(url=stream))
             ]]
-            await query.message.edit_reply_markup(InlineKeyboardMarkup(button))
+            await query.message.edit_reply_markup(InlineKeyboardMarkup(btn))
         except Exception as e:
             print(e)
             await query.answer(f"something went wrong\n\n{e}", show_alert=True)
