@@ -1246,16 +1246,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('❗ 𝚂𝙴𝙰𝚁𝙲𝙷 𝙵𝙾𝚁𝙼𝙰𝚃 & طريقـة البحـث ❗', callback_data='ezay')
+            InlineKeyboardButton('• 𝚂𝙴𝙰𝚁𝙲𝙷 𝙵𝙾𝚁𝙼𝙰𝚃 & طريقـة البحـث •', callback_data='ezay')
         ], [
-            InlineKeyboardButton('🔊 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TorrentSeriess'),
-            InlineKeyboardButton('🔍 𝚂𝙴𝙰𝚁𝙲𝙷', url='https://t.me/ArrowFlix2')
+            InlineKeyboardButton('• 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 •', url='https://t.me/TorrentSeriess'),
+            InlineKeyboardButton('• 𝚂𝙴𝙰𝚁𝙲𝙷 •', url='https://t.me/ArrowFlix2')
         ], [
-            InlineKeyboardButton('اضـافـة الترجمـة 🪄', callback_data='howadd'),
-            InlineKeyboardButton('ليـه التورنت..؟ 🧲', callback_data='nhow')
+            InlineKeyboardButton('• إضافة الترجمة •', callback_data='howadd'),
+            InlineKeyboardButton('• ليه التورنت..؟ •', callback_data='nhow'),
+		InlineKeyboardButton('• الأعلي بحثاً •', callback_data="topsearch")
         ], [                
-            InlineKeyboardButton('💠 𝙷𝙴𝙻𝙿', callback_data='features'),
-            InlineKeyboardButton('🌐 𝙰𝙱𝙾𝚄𝚃', callback_data='bot')
+            InlineKeyboardButton('• 𝙷𝙴𝙻𝙿 •', callback_data='features'),
+            InlineKeyboardButton('• 𝙰𝙱𝙾𝚄𝚃 •', callback_data='bot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -1484,7 +1485,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('• ꜰɪʟᴛᴇʀꜱ •', callback_data='filters'),
                 InlineKeyboardButton('• ꜰɪʟᴇ ꜱᴛᴏʀᴇ •', callback_data='store_file')
             ],[
-                InlineKeyboardButton('• ꜱᴇᴛᴛɪɴɢꜱ •', callback_data='setting_btn')        
+                InlineKeyboardButton('• ꜱᴇᴛᴛɪɴɢꜱ •', callback_data='setting_btn')
             ],[
                 InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
             ]]
