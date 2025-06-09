@@ -1209,17 +1209,31 @@ async def cb_handler(client: Client, query: CallbackQuery):
             fileName = {quote_plus(get_name(silent_msg))}
             silent_stream = f"{URL}watch/{str(silent_msg.id)}/{quote_plus(get_name(silent_msg))}?hash={get_hash(silent_msg)}"
             silent_download = f"{URL}{str(silent_msg.id)}/{quote_plus(get_name(silent_msg))}?hash={get_hash(silent_msg)}"
-	    btn = [[
-                InlineKeyboardButton("• ᴅᴏᴡɴʟᴏᴀᴅ •", url=download),
-                InlineKeyboardButton('• ᴡᴀᴛᴄʜ •', url=stream)
-            ],[
-                InlineKeyboardButton("• ᴡᴀᴛᴄʜ ɪɴ ᴡᴇʙ ᴀᴘᴘ •", web_app=WebAppInfo(url=stream))
-            ]]
-            await query.message.edit_reply_markup(InlineKeyboardMarkup(btn))
+            await silent_msg.reply_text(
+                text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
+                quote=True,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("• ᴅᴏᴡɴʟᴏᴀᴅ •", url=silent_download),  # we download Link
+                                                    InlineKeyboardButton('• ᴡᴀᴛᴄʜ •', url=silent_stream)]])  # web stream Link
+            )
+            SilentXBotz = await query.message.reply_text(
+                text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
+                quote=True,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup([[
+			InlineKeyboardButton("• ᴅᴏᴡɴʟᴏᴀᴅ •", url=silent_download),  # we download Link
+                        InlineKeyboardButton('• ᴡᴀᴛᴄʜ •', url=silent_stream)],[
+                        InlineKeyboardButton("• ᴡᴀᴛᴄʜ ɪɴ ᴡᴇʙ ᴀᴘᴘ •", web_app=WebAppInfo(url=silent_stream))
+            ]]  # web stream Link
+            )              
+            await asyncio.sleep(DELETE_TIME) 
+            await SilentXBotz.delete()
+            return            
         except Exception as e:
             print(e)
-            await query.answer(f"something went wrong\n\n{e}", show_alert=True)
-            return        
+            await query.answer(f"⚠️ SOMETHING WENT WRONG \n\n{e}", show_alert=True)
+            return
+           
     
     elif query.data == "pagesn1":
         await query.answer(text=script.PAGE_TXT, show_alert=True)
