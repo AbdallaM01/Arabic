@@ -768,7 +768,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer(url=f"https://t.me/{temp.U_NAME}?start=file_{query.message.chat.id}_{file_id}")          
                             
     elif query.data.startswith("sendfiles"):
-        clicked = query.from_user.id
         ident, key = query.data.split("#") 
         settings = await get_settings(query.message.chat.id)
         try:
@@ -1253,7 +1252,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ], [
             InlineKeyboardButton('• إضافة الترجمة •', callback_data='howadd'),
             InlineKeyboardButton('• ليه التورنت..؟ •', callback_data='nhow'),
-		InlineKeyboardButton('• الأعلي بحثاً •', callback_data="topsearch")
         ], [                
             InlineKeyboardButton('• 𝙷𝙴𝙻𝙿 •', callback_data='features'),
             InlineKeyboardButton('• 𝙰𝙱𝙾𝚄𝚃 •', callback_data='bot')
@@ -1485,7 +1483,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('• ꜰɪʟᴛᴇʀꜱ •', callback_data='filters'),
                 InlineKeyboardButton('• ꜰɪʟᴇ ꜱᴛᴏʀᴇ •', callback_data='store_file')
             ],[
-                InlineKeyboardButton('• ꜱᴇᴛᴛɪɴɢꜱ •', callback_data='setting_btn')
+                InlineKeyboardButton('• ꜱᴇᴛᴛɪɴɢꜱ •', callback_data='setting_btn'),
+		InlineKeyboardButton('• ᴛᴏᴘ •', callback_data="topsearch")
             ],[
                 InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
             ]]
