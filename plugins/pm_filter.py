@@ -1257,7 +1257,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('💠 𝙷𝙴𝙻𝙿', callback_data='features'),
             InlineKeyboardButton('🌐 𝙰𝙱𝙾𝚄𝚃', callback_data='bot')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
+         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
@@ -1368,34 +1368,36 @@ async def cb_handler(client: Client, query: CallbackQuery):
             print(e)
             
     elif query.data == "ezay":
-        buttons = [[
+        btn = [[
             InlineKeyboardButton('مصطلحات تورنت 🔑', callback_data='imp'),
             InlineKeyboardButton('للمزيد...', url='https://t.me/TorrentSeriess/2735')
         ], [
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='start')            
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.EZAY_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
+        reply_markup = InlineKeyboardMarkup(btn)
+            await query.message.edit_text(
+                text=script.ezay.format(temp.B_LINK),
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+            ) 
         except Exception as e:
             print(e)
 
     elif query.data == "nhow":
-        buttons = [[
+        btn = [[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='start')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.NHOW_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
+        reply_markup = InlineKeyboardMarkup(btn)
+            await query.message.edit_text(
+                text=script.nhow.format(temp.B_LINK),
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+            ) 
+        except Exception as e:
+            print(e)
 
     elif query.data == "howadd":
-        buttons = [[
+        btn = [[
             InlineKeyboardButton('🕸️ موقع الترجمة', url='https://subdl.com'),
             InlineKeyboardButton('📺 برامج المشاهدة', url='https://telegra.ph/برامج-عرض-الترجمة-04-24')
         ], [            
@@ -1404,54 +1406,44 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ], [
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='start')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.HOWADD_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )  
+        reply_markup = InlineKeyboardMarkup(btn)
+            await query.message.edit_text(
+                text=script.howadd.format(temp.B_LINK),
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+            ) 
         except Exception as e:
             print(e)
 
     elif query.data == "fnt":
-        buttons = [[
+        btn = [[
             InlineKeyboardButton('خط ايجي بست', url='https://t.me/ARROWFLIXBOT?start=ZmlsZV9CUUFEQkFBRDBRY0FBdmdJdUZLbFU4SktVWmZuZnhZRQ'),
             InlineKeyboardButton('خط نتفليكس', url='https://t.me/ARROWFLIXBOT?start=ZmlsZV9CUUFEQkFBREx3a0FBbWtGS1ZPLTJOeXlsM09wWHhZRQ')
         ], [
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='howadd')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
-        )
-        await query.message.edit_text(
-            text=script.FNT_TXT,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )     
+        reply_markup = InlineKeyboardMarkup(btn)
+            await query.message.edit_text(
+                text=script.fnt.format(temp.B_LINK),
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+            ) 
         except Exception as e:
             print(e)
 
     elif query.data == "imp":
-        buttons = [[
+        btn = [[
             InlineKeyboardButton('🎤 اختيار الصوت', url='https://telegra.ph/اختيار-الصوت-04-25'),
             InlineKeyboardButton('📺 الفرق بين x265 x264', url='https://telegra.ph/معدل-الترميز-04-23')
         ], [
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='start')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
-        )
-        await query.message.edit_text(
-            text=script.IMP_TXT,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )   
+        reply_markup = InlineKeyboardMarkup(btn)
+            await query.message.edit_text(
+                text=script.imp.format(temp.B_LINK),
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+            ) 
         except Exception as e:
             print(e)
         
