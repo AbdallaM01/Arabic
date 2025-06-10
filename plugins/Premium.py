@@ -57,8 +57,8 @@ async def get_premium(client, message):
         data = await db.get_user(user_id)  
         if data and data.get("expiry_time"):
             expiry = data.get("expiry_time") 
-            expiry_ist = expiry.astimezone(pytz.timezone("/Kolkata"))
-            expiry_str_in_ist = expiry.astimezone(pytz.timezone("/Kolkata")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")            
+            expiry_ist = expiry.astimezone(pytz.timezone("Africa/Cairo"))
+            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Africa/Cairo")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")            
             current_time = datetime.datetime.now(pytz.timezone("Africa/Cairo"))
             time_left = expiry_ist - current_time
             days = time_left.days
