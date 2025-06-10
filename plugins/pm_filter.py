@@ -42,7 +42,7 @@ import tracemalloc
 
 tracemalloc.start()
 
-TIMEZONE = "Asia/Kolkata"
+TIMEZONE = "Africa/Cairo"
 BUTTON = {}
 BUTTONS = {}
 FRESH = {}
@@ -127,7 +127,7 @@ async def refercall(bot, query):
 async def next_page(bot, query):
     try:
         ident, req, key, offset = query.data.split("_")
-        curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+        curr_time = datetime.now(pytz.timezone('Africa/Cairo')).time()
         if int(req) not in [query.from_user.id, 0]:
             return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
         try:
@@ -242,7 +242,7 @@ async def next_page(bot, query):
                     ],
                 )
         if not settings.get('button'):
-            cur_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+            cur_time = datetime.now(pytz.timezone('Africa/Cairo')).time()
             time_difference = timedelta(hours=cur_time.hour, minutes=cur_time.minute, seconds=(cur_time.second+(cur_time.microsecond/1000000))) - timedelta(hours=curr_time.hour, minutes=curr_time.minute, seconds=(curr_time.second+(curr_time.microsecond/1000000)))
             remaining_seconds = "{:.2f}".format(time_difference.total_seconds())
             cap = await get_cap(settings, remaining_seconds, files, query, total, search, offset)
@@ -308,7 +308,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
     try:
         _, qual, key, offset = query.data.split("#")
         offset = int(offset)
-        curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+        curr_time = datetime.now(pytz.timezone('Africa/Cairo')).time()
         search = FRESH.get(key)
         search = search.replace("_", " ")
         baal = qual in search
@@ -384,7 +384,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
                 [InlineKeyboardButton(text="↭ ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ↭",callback_data="pages")]
             )               
         if not settings.get('button'):
-            cur_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+            cur_time = datetime.now(pytz.timezone('Africa/Cairo')).time()
             time_difference = timedelta(hours=cur_time.hour, minutes=cur_time.minute, seconds=(cur_time.second+(cur_time.microsecond/1000000))) - timedelta(hours=curr_time.hour, minutes=curr_time.minute, seconds=(curr_time.second+(curr_time.microsecond/1000000)))
             remaining_seconds = "{:.2f}".format(time_difference.total_seconds())
             cap = await get_cap(settings, remaining_seconds, files, query, total_results, search, offset)
@@ -451,7 +451,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     try:
         _, lang, key, offset = query.data.split("#")
         offset = int(offset)
-        curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+        curr_time = datetime.now(pytz.timezone('Africa/Cairo')).time()
         search = FRESH.get(key)
         search = search.replace("_", " ")
         baal = lang in search
@@ -527,7 +527,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             )    
 
         if not settings.get('button'):
-            cur_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+            cur_time = datetime.now(pytz.timezone('Africa/Cairo')).time()
             time_difference = timedelta(hours=cur_time.hour, minutes=cur_time.minute, seconds=(cur_time.second+(cur_time.microsecond/1000000))) - timedelta(hours=curr_time.hour, minutes=curr_time.minute, seconds=(curr_time.second+(curr_time.microsecond/1000000)))
             remaining_seconds = "{:.2f}".format(time_difference.total_seconds())
             cap = await get_cap(settings, remaining_seconds, files, query, total_results, search, offset)
@@ -594,7 +594,7 @@ async def filter_season_cb_handler(client: Client, query: CallbackQuery):
     try:
         _, seas, key, offset = query.data.split("#")
         offset = int(offset)
-        curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+        curr_time = datetime.now(pytz.timezone('Africa/Cairo')).time()
         search = FRESH.get(key)
         search = search.replace("_", " ")
         baal = seas in search
@@ -670,7 +670,7 @@ async def filter_season_cb_handler(client: Client, query: CallbackQuery):
             )    
 
         if not settings.get('button'):
-            cur_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+            cur_time = datetime.now(pytz.timezone('Africa/Cairo')).time()
             time_difference = timedelta(hours=cur_time.hour, minutes=cur_time.minute, seconds=(cur_time.second+(cur_time.microsecond/1000000))) - timedelta(hours=curr_time.hour, minutes=curr_time.minute, seconds=(curr_time.second+(curr_time.microsecond/1000000)))
             remaining_seconds = "{:.2f}".format(time_difference.total_seconds())
             cap = await get_cap(settings, remaining_seconds, files, query, total_results, search, offset)
@@ -1731,7 +1731,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     
 async def auto_filter(client, msg, spoll=False):
-    curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+    curr_time = datetime.now(pytz.timezone('Africa/Cairo')).time()
     if not spoll:
         message = msg
         if message.text.startswith("/"): return
@@ -1824,7 +1824,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="↭ ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ↭",callback_data="pages")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
-    cur_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+    cur_time = datetime.now(pytz.timezone('Africa/Cairo')).time()
     time_difference = timedelta(hours=cur_time.hour, minutes=cur_time.minute, seconds=(cur_time.second+(cur_time.microsecond/1000000))) - timedelta(hours=curr_time.hour, minutes=curr_time.minute, seconds=(curr_time.second+(curr_time.microsecond/1000000)))
     remaining_seconds = "{:.2f}".format(time_difference.total_seconds())
     TEMPLATE = script.IMDB_TEMPLATE_TXT
