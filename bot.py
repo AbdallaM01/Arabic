@@ -92,7 +92,7 @@ async def SilentXBotz_start():
     SilentX.loop.create_task(check_expired_premium(SilentX))
     logging.info(f"{me.first_name} with Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
     logging.info(script.LOGO)
-    tz = pytz.timezone('Asia/Kolkata')
+    tz = pytz.timezone('Africa/Cairo')
     today = date.today()
     now = datetime.now(tz)
     time = now.strftime("%H:%M:%S %p")
