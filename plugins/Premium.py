@@ -34,9 +34,9 @@ async def myplan(client, message):
         data = await db.get_user(message.from_user.id) 
         if data and data.get("expiry_time"):
             expiry = data.get("expiry_time") 
-            expiry_ist = expiry.astimezone(pytz.timezone("Asia/Kolkata"))
-            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Asia/Kolkata")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")            
-            current_time = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+            expiry_ist = expiry.astimezone(pytz.timezone("Africa/Cairo"))
+            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Africa/Cairo")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")            
+            current_time = datetime.datetime.now(pytz.timezone("Africa/Cairo"))
             time_left = expiry_ist - current_time
             days = time_left.days
             hours, remainder = divmod(time_left.seconds, 3600)
@@ -57,9 +57,9 @@ async def get_premium(client, message):
         data = await db.get_user(user_id)  
         if data and data.get("expiry_time"):
             expiry = data.get("expiry_time") 
-            expiry_ist = expiry.astimezone(pytz.timezone("Asia/Kolkata"))
-            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Asia/Kolkata")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")            
-            current_time = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+            expiry_ist = expiry.astimezone(pytz.timezone("/Kolkata"))
+            expiry_str_in_ist = expiry.astimezone(pytz.timezone("/Kolkata")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")            
+            current_time = datetime.datetime.now(pytz.timezone("Africa/Cairo"))
             time_left = expiry_ist - current_time
             days = time_left.days
             hours, remainder = divmod(time_left.seconds, 3600)
@@ -74,7 +74,7 @@ async def get_premium(client, message):
 @Client.on_message(filters.command("add_premium") & filters.user(ADMINS))
 async def give_premium_cmd_handler(client, message):
     if len(message.command) == 4:
-        time_zone = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+        time_zone = datetime.datetime.now(pytz.timezone("Africa/Cairo"))
         current_time = time_zone.strftime("%d-%m-%Y\n⏱️ ᴊᴏɪɴɪɴɢ ᴛɪᴍᴇ : %I:%M:%S %p") 
         user_id = int(message.command[1])  
         user = await client.get_users(user_id)
@@ -86,7 +86,7 @@ async def give_premium_cmd_handler(client, message):
             await db.update_user(user_data) 
             data = await db.get_user(user_id)
             expiry = data.get("expiry_time")   
-            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Asia/Kolkata")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")         
+            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Africa/Cairo")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")         
             await message.reply_text(f"ᴘʀᴇᴍɪᴜᴍ ᴀᴅᴅᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ✅\n\n👤 ᴜꜱᴇʀ : {user.mention}\n⚡ ᴜꜱᴇʀ ɪᴅ : <code>{user_id}</code>\n⏰ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇꜱꜱ : <code>{time}</code>\n\n⏳ ᴊᴏɪɴɪɴɢ ᴅᴀᴛᴇ : {current_time}\n\n⌛️ ᴇxᴘɪʀʏ ᴅᴀᴛᴇ : {expiry_str_in_ist}", disable_web_page_preview=True)
             await client.send_message(
                 chat_id=user_id,
@@ -109,9 +109,9 @@ async def premium_user(client, message):
         data = await db.get_user(user['id'])
         if data and data.get("expiry_time"):
             expiry = data.get("expiry_time") 
-            expiry_ist = expiry.astimezone(pytz.timezone("Asia/Kolkata"))
-            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Asia/Kolkata")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")            
-            current_time = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+            expiry_ist = expiry.astimezone(pytz.timezone("Africa/Cairo"))
+            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Africa/Cairo")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")            
+            current_time = datetime.datetime.now(pytz.timezone("Africa/Cairo"))
             time_left = expiry_ist - current_time
             days = time_left.days
             hours, remainder = divmod(time_left.seconds, 3600)
