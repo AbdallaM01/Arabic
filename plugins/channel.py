@@ -16,7 +16,7 @@ from database.ia_filterdb import save_file
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 
-CAPTION_LANGUAGES = ["Bhojpuri", "Hindi", "Bengali", "Tamil", "English", "Bangla", "Telugu", "Malayalam", "Kannada", "Marathi", "Punjabi", "Bengoli", "Gujrati", "Korean", "Gujarati", "Spanish", "French", "German", "Chinese", "Arabic", "Portuguese", "Russian", "Japanese", "Odia", "Assamese", "Urdu"]
+CAPTION_LANGUAGES = ["English", "Korean", "Spanish", "French", "Japanese"]
 
 SILENTX_UPDATE_CAPTION = """𝖭𝖤𝖶 𝖥𝖨𝖫𝖤 𝖠𝖣𝖣𝖤𝖣 ✅
 
@@ -64,7 +64,7 @@ async def send_movie_update(bot, file_name, caption):
         elif season_match:
             season = season_match.group(1)
             file_name = file_name[:file_name.find(season) + 1]
-        quality = await get_qualities(caption) or "HDRip"
+        quality = await get_qualities(caption) or "WEBRip"
         pixel = await get_pixels(caption) or "720p"
         language = ", ".join([lang for lang in CAPTION_LANGUAGES if lang.lower() in caption.lower()]) or "Not Idea"
         if file_name in notified_movies:
