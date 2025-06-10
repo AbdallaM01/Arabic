@@ -22,7 +22,7 @@ def hash_code(code):
 
 async def generate_code(duration_str):
     code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
-    kolkata_tz = pytz.timezone("Asia/Kolkata")
+    kolkata_tz = pytz.timezone("Africa/Cairo")
     created_at = datetime.now(tz=kolkata_tz) 
 
     await db.codes.insert_one({
@@ -92,7 +92,7 @@ async def redeem_code_cmd(client, message):
                     user_data = {"id": user_id, "expiry_time": new_expiry}
                     await db.update_user(user_data)
                     await db.codes.update_one({"_id": code_data["_id"]}, {"$set": {"used": True, "user_id": user_id}})
-                    expiry_str_in_ist = new_expiry.astimezone(pytz.timezone("Asia/Kolkata")).strftime("⌛️ ᴇxᴘɪʀʏ ᴅᴀᴛᴇ: %d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ: %I:%M:%S %p")
+                    expiry_str_in_ist = new_expiry.astimezone(pytz.timezone("Africa/Cairo")).strftime("⌛️ ᴇxᴘɪʀʏ ᴅᴀᴛᴇ: %d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ: %I:%M:%S %p")
                     await message.reply_text(f"🎉 ᴄᴏᴅᴇ ʀᴇᴅᴇᴇᴍᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ!\nᴏᴜ ɴᴏᴡ ʜᴀᴠᴇ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇss ᴜɴᴛɪʟ:\n\n✨ᴅᴜʀᴀᴛɪᴏɴ: {code_data['duration']}\n{expiry_str_in_ist}")
                 else:
                     await message.reply_text("🚫 ɪɴᴠᴀʟɪᴅ ᴅᴜʀᴀᴛɪᴏɴ ɪɴ ᴛʜᴇ ᴄᴏᴅᴇ.")
@@ -124,7 +124,7 @@ async def all_codes_cmd(client, message):
         duration = code_data.get("duration", "Unknown")
         user_id = code_data.get("user_id")
         used = "Yes ✅" if code_data.get("used", False) else "No ⭕"
-        created_at = code_data["created_at"].astimezone(pytz.timezone("Asia/Kolkata")).strftime("%d-%m-%Y %I:%M %p")
+        created_at = code_data["created_at"].astimezone(pytz.timezone("Africa/Cairo")).strftime("%d-%m-%Y %I:%M %p")
         if user_id:
             user = await client.get_users(user_id)
             user_name = user.first_name if user.first_name else "Unknown User"
