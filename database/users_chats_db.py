@@ -177,7 +177,7 @@ class Database:
     async def get_notcopy_user(self, user_id):
         user_id = int(user_id)
         user = await self.misc.find_one({"user_id": user_id})
-        ist_timezone = pytz.timezone('Asia/Kolkata')
+        ist_timezone = pytz.timezone('Africa/Cairo')
         if not user:
             res = {
                 "user_id": user_id,
@@ -200,7 +200,7 @@ class Database:
         except Exception:
             user = await self.get_notcopy_user(user_id)
             pastDate = user["last_verified"]
-        ist_timezone = pytz.timezone('Asia/Kolkata')
+        ist_timezone = pytz.timezone('Africa/Cairo')
         pastDate = pastDate.astimezone(ist_timezone)
         current_time = datetime.datetime.now(tz=ist_timezone)
         seconds_since_midnight = (current_time - datetime.datetime(current_time.year, current_time.month, current_time.day, 0, 0, 0, tzinfo=ist_timezone)).total_seconds()
@@ -215,7 +215,7 @@ class Database:
         except Exception:
             user = await self.get_notcopy_user(user_id)
             pastDate = user["second_time_verified"]
-        ist_timezone = pytz.timezone('Asia/Kolkata')
+        ist_timezone = pytz.timezone('Africa/Cairo')
         pastDate = pastDate.astimezone(ist_timezone)
         current_time = datetime.datetime.now(tz=ist_timezone)
         seconds_since_midnight = (current_time - datetime.datetime(current_time.year, current_time.month, current_time.day, 0, 0, 0, tzinfo=ist_timezone)).total_seconds()
@@ -226,7 +226,7 @@ class Database:
     async def use_second_shortener(self, user_id, time):
         user = await self.get_notcopy_user(user_id)
         if not user.get("second_time_verified"):
-            ist_timezone = pytz.timezone('Asia/Kolkata')
+            ist_timezone = pytz.timezone('Africa/Cairo')
             await self.update_notcopy_user(user_id, {"second_time_verified":datetime.datetime(2019, 5, 17, 0, 0, 0, tzinfo=ist_timezone)})
             user = await self.get_notcopy_user(user_id)
         if await self.is_user_verified(user_id):
@@ -235,7 +235,7 @@ class Database:
             except Exception:
                 user = await self.get_notcopy_user(user_id)
                 pastDate = user["last_verified"]
-            ist_timezone = pytz.timezone('Asia/Kolkata')
+            ist_timezone = pytz.timezone('Africa/Cairo')
             pastDate = pastDate.astimezone(ist_timezone)
             current_time = datetime.datetime.now(tz=ist_timezone)
             time_difference = current_time - pastDate
@@ -248,7 +248,7 @@ class Database:
     async def use_third_shortener(self, user_id, time):
         user = await self.get_notcopy_user(user_id)
         if not user.get("third_time_verified"):
-            ist_timezone = pytz.timezone('Asia/Kolkata')
+            ist_timezone = pytz.timezone('Africa/Cairo')
             await self.update_notcopy_user(user_id, {"third_time_verified":datetime.datetime(2018, 5, 17, 0, 0, 0, tzinfo=ist_timezone)})
             user = await self.get_notcopy_user(user_id)
         if await self.user_verified(user_id):
@@ -257,7 +257,7 @@ class Database:
             except Exception:
                 user = await self.get_notcopy_user(user_id)
                 pastDate = user["second_time_verified"]
-            ist_timezone = pytz.timezone('Asia/Kolkata')
+            ist_timezone = pytz.timezone('Africa/Cairo')
             pastDate = pastDate.astimezone(ist_timezone)
             current_time = datetime.datetime.now(tz=ist_timezone)
             time_difference = current_time - pastDate
