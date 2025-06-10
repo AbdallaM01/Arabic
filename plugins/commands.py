@@ -24,7 +24,7 @@ from utils import *
 logging.basicConfig(level=logging.ERROR)
 logger = logging.getLogger(__name__)
 
-TIMEZONE = "Asia/Kolkata"
+TIMEZONE = "Africa/Cairo"
 BATCH_FILES = {}
 
 @Client.on_message(filters.command("start") & filters.incoming)
@@ -41,7 +41,7 @@ async def start(client, message):
         if not verify_id_info or verify_id_info["verified"]:
             await message.reply("<b>ʟɪɴᴋ ᴇxᴘɪʀᴇᴅ ᴛʀʏ ᴀɢᴀɪɴ...</b>")
             return  
-        ist_timezone = pytz.timezone('Asia/Kolkata')
+        ist_timezone = pytz.timezone('Africa/Cairo')
         if await db.user_verified(user_id):
             key = "third_time_verified"
         else:
@@ -61,7 +61,7 @@ async def start(client, message):
             verifiedfiles = f"https://telegram.me/{temp.U_NAME}?start=allfiles_{grp_id}_{file_id}"
         else:
             verifiedfiles = f"https://telegram.me/{temp.U_NAME}?start=file_{grp_id}_{file_id}"
-        await client.send_message(settings['log'], script.VERIFIED_LOG_TEXT.format(m.from_user.mention, user_id, datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%d %B %Y'), num))
+        await client.send_message(settings['log'], script.VERIFIED_LOG_TEXT.format(m.from_user.mention, user_id, datetime.now(pytz.timezone('Africa/Cairo')).strftime('%d %B %Y'), num))
         btn = [[
             InlineKeyboardButton("✅ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ꜰɪʟᴇ ✅", url=verifiedfiles),
         ]]
