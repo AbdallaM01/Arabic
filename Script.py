@@ -1,6 +1,5 @@
 class script(object):
-    START_TXT = """<b><blockquote>𝙷𝙴𝙻𝙾 {}, ᴍʏ ɴᴀᴍᴇ <a href=https://t.me/{}>{}</a></blockquote>
-𝙸 𝙲𝙰𝙽 𝙷𝙴𝙻𝙿 𝚈𝙾𝚄 𝚃𝙾 𝙵𝚒𝚗𝚍 𝙰𝙽𝚈 𝚂𝙴𝚁𝙸𝙴𝚂 𝙰𝙽𝙳 𝙼𝙾𝚅𝙸𝙴𝚂 𝙹𝚄𝚂𝚃 𝚂𝙴𝙽𝙳 𝙽𝙰𝙼𝙴</b>\n\nꜰᴏʀ ᴍᴏʀᴇ ʜᴇʟᴘ ʀᴇᴀᴅ ꜰʀᴏᴍ ᴛʜᴇ ᴍᴇɴᴜ ʙᴇʟᴏᴡ"""
+    START_TXT = """"""
     
     FEATURES_TXT = """<b>ʜᴇʀᴇ ɪꜱ ᴀʟʟ ᴍʏ ꜰᴜɴᴛɪᴏɴꜱ.</b>"""
 
@@ -270,10 +269,7 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<code>{file_name}</code><b>   
-➲ [ᴀʀʀᴏᴡғʟɪx](https://t.me/ArrowFlix2)
-➲ [ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ](https://t.me/TorrentSeriess)
-</b>"""
+    CAPTION = """<b>[{file_name}](https://www.facebook.com/groups/2363490613859694)</b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>🎬 ᴛɪᴛᴛʟᴇ : <a href={url}>{title}</a>
