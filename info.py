@@ -109,7 +109,7 @@ PM_SEARCH = bool(environ.get('PM_SEARCH', False))
 EMOJI_MODE = bool(environ.get('EMOJI_MODE', False)) 
 
 LANGUAGES = ["malayalam", "", "tamil", "", "english", "", "hindi", "", "telugu", "", "kannada", "", "gujarati", "", "marathi", "", "punjabi", ""]
-QUALITIES = ["360P", "", "480P", "", "720P", "", "1080P", "", "1440P", "", "2160P", ""]
+QUALITIES = ["144", "240", "360", "", "480", "", "720", "", "1080", "", ""]
 SEASONS = ["s01" , "s02" , "s03" , "s04", "s05" , "s06" , "s07" , "s08" , "s09" , "s10"]
 
 STREAM_MODE = bool(environ.get('STREAM_MODE', True))
