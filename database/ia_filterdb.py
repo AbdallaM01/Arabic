@@ -112,7 +112,7 @@ async def get_search_results(chat_id, query, file_type=None, max_results=10, off
     query = query.strip()
     if not query:
         raw_pattern = '.'
-    elif ' ' not in query:
+    elif '' not in query:
         raw_pattern = r'(\b|[\.\+\-_])' + query + r'(\b|[\.\+\-_])'
     else:
         raw_pattern = query.replace(' ', r'.*[\s\.\+\-_()]')
