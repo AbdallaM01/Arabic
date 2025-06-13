@@ -93,11 +93,6 @@ async def pm_text(bot, message):
             gfilter = await global_filters(bot, message)
             if gfilter == False:
                 await auto_filter(bot, message)
-        else:
-            await message.reply_text(
-             text=f"<b><i>ɪ ᴀᴍ ɴᴏᴛ ᴡᴏʀᴋɪɴɢ ʜᴇʀᴇ 🚫 ᴊᴏɪɴ ᴍʏ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴀɴᴅ ꜱᴇᴀʀᴄʜ ᴛʜᴇʀᴇ !</i></b>",   
-             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ꜱᴇᴀʀᴄʜʜᴇʀᴇ ", url=GRP_LNK)]])
-            )
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 
