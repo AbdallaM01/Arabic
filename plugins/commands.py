@@ -290,7 +290,7 @@ async def start(client, message):
 
             if STREAM_MODE:
                 btn = [
-                    [InlineKeyboardButton('sᴛʀᴇᴀᴍ ᴀɴᴅ ᴅᴏᴡɴʟᴏᴀᴅ', callback_data=f'streamfile:{file_id}')]
+                    [InlineKeyboardButton('🚀 مشاهدة / تحميل 🍿', callback_data=f'streamfile:{file_id}')]
                 ]
             try:
                 await client.send_cached_media(
