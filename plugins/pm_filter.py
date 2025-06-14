@@ -1775,7 +1775,6 @@ async def auto_filter(client, msg, spoll=False):
             for file in files
         ]
         btn.insert(0, 
-            btn.insert(0, 
                 [ 
                 InlineKeyboardButton(f'⚙️ الجودة ⚙️', callback_data=f"qualities#{key}")
                 ]
@@ -1783,7 +1782,6 @@ async def auto_filter(client, msg, spoll=False):
     else:
         btn = []
         btn.insert(0, 
-             btn.insert(0, 
                 [ 
                 InlineKeyboardButton(f'⚙️ الجودة ⚙️', callback_data=f"qualities#{key}")
                 ]
