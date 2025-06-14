@@ -200,7 +200,7 @@ async def get_pixels(caption):
     return ", ".join([p for p in pixels if p.lower() in caption.lower()])
 
 
-async def movie_name_format(file_name):
+async def movie_name_format(caption):
   clean_filename = re.sub(r'http\S+', '', re.sub(r'@\w+|#\w+', '', caption).replace('_', ' ').replace('[', '').replace(']', '').replace('(', '').replace(')', '').replace('{', '').replace('}', '').replace('.', ' ').replace('@', '').replace(':', '').replace(';', '').replace("'", '').replace('-', '').replace('!', '').replace('<b>', '', 1).replace('<\b>', '', 1)).strip()
   return clean_filename
 
