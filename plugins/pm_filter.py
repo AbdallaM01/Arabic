@@ -1727,7 +1727,7 @@ async def auto_filter(client, msg, spoll=False):
         if len(message.text) < 100:
             search = message.text         
             search = search.lower()
-            m=await message.reply_text(f'<b>انتظر {message.from_user.mention} جارى البحث عن :<i>{search}...</i></b>', reply_to_message_id=message.id)
+            m=await message.reply_text(f'<b>انتظر {message.from_user.mention} جارى البحث عن : <i>{search}...</i></b>', reply_to_message_id=message.id)
             find = search.split(" ")
             search = ""
             removes = ["ممكن", "مسلسل", "عايز", "فيلم", "الجزء", "الموسم", "الرابع", "التاني", "p", "فين", "الحلقة"] 
