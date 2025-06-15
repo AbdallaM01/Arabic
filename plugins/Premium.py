@@ -58,7 +58,7 @@ async def get_premium(client, message):
         if data and data.get("expiry_time"):
             expiry = data.get("expiry_time") 
             expiry_ist = expiry.astimezone(pytz.timezone("Africa/Cairo"))
-            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Africa/Cairo")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")            
+            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Africa/Cairo")).strftime("%d-%m-%Y\n⏱️ وقت الإنتهاء : %I:%M:%S %p")            
             current_time = datetime.datetime.now(pytz.timezone("Africa/Cairo"))
             time_left = expiry_ist - current_time
             days = time_left.days
@@ -75,7 +75,7 @@ async def get_premium(client, message):
 async def give_premium_cmd_handler(client, message):
     if len(message.command) == 4:
         time_zone = datetime.datetime.now(pytz.timezone("Africa/Cairo"))
-        current_time = time_zone.strftime("%d-%m-%Y\n⏱️ ᴊᴏɪɴɪɴɢ ᴛɪᴍᴇ : %I:%M:%S %p") 
+        current_time = time_zone.strftime("%d-%m-%Y\n⏱️ وقت الإشتراك : %I:%M:%S %p") 
         user_id = int(message.command[1])  
         user = await client.get_users(user_id)
         time = message.command[2]+" "+message.command[3]
@@ -86,11 +86,11 @@ async def give_premium_cmd_handler(client, message):
             await db.update_user(user_data) 
             data = await db.get_user(user_id)
             expiry = data.get("expiry_time")   
-            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Africa/Cairo")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")         
+            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Africa/Cairo")).strftime("%d-%m-%Y\n⏱️ وقت الإنتهاء : %I:%M:%S %p")         
             await message.reply_text(f"ᴘʀᴇᴍɪᴜᴍ ᴀᴅᴅᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ✅\n\n👤 ᴜꜱᴇʀ : {user.mention}\n⚡ ᴜꜱᴇʀ ɪᴅ : <code>{user_id}</code>\n⏰ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇꜱꜱ : <code>{time}</code>\n\n⏳ ᴊᴏɪɴɪɴɢ ᴅᴀᴛᴇ : {current_time}\n\n⌛️ ᴇxᴘɪʀʏ ᴅᴀᴛᴇ : {expiry_str_in_ist}", disable_web_page_preview=True)
             await client.send_message(
                 chat_id=user_id,
-                text=f"👋 ʜᴇʏ {user.mention},\nᴛʜᴀɴᴋ ʏᴏᴜ ꜰᴏʀ ᴘᴜʀᴄʜᴀꜱɪɴɢ ᴘʀᴇᴍɪᴜᴍ.\nᴇɴᴊᴏʏ !! ✨🎉\n\n⏰ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇꜱꜱ : <code>{time}</code>\n⏳ ᴊᴏɪɴɪɴɢ ᴅᴀᴛᴇ : {current_time}\n\n⌛️ ᴇxᴘɪʀʏ ᴅᴀᴛᴇ : {expiry_str_in_ist}", disable_web_page_preview=True              
+                text=f"👋 ʜᴇʏ {user.mention},\nأصبح اشتراكك المميز نشطًا الآن .\nᴇɴᴊᴏʏ !! ✨🎉\n\n⏰ مدة الإشتراك : <code>{time}</code>\n⏳ وقت الإشتراك : {current_time}\n\n⌛️ تاريخ الإنتهاء : {expiry_str_in_ist}", disable_web_page_preview=True              
             )    
             await client.send_message(PREMIUM_LOGS, text=f"#Added_Premium\n\n👤 ᴜꜱᴇʀ : {user.mention}\n⚡ ᴜꜱᴇʀ ɪᴅ : <code>{user_id}</code>\n⏰ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇꜱꜱ : <code>{time}</code>\n\n⏳ ᴊᴏɪɴɪɴɢ ᴅᴀᴛᴇ : {current_time}\n\n⌛️ ᴇxᴘɪʀʏ ᴅᴀᴛᴇ : {expiry_str_in_ist}", disable_web_page_preview=True)
                     
@@ -110,7 +110,7 @@ async def premium_user(client, message):
         if data and data.get("expiry_time"):
             expiry = data.get("expiry_time") 
             expiry_ist = expiry.astimezone(pytz.timezone("Africa/Cairo"))
-            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Africa/Cairo")).strftime("%d-%m-%Y\n⏱️ ᴇxᴘɪʀʏ ᴛɪᴍᴇ : %I:%M:%S %p")            
+            expiry_str_in_ist = expiry.astimezone(pytz.timezone("Africa/Cairo")).strftime("%d-%m-%Y\n⏱️ وقت الإنتهاء : %I:%M:%S %p")            
             current_time = datetime.datetime.now(pytz.timezone("Africa/Cairo"))
             time_left = expiry_ist - current_time
             days = time_left.days
